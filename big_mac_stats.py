@@ -10,7 +10,7 @@ class BigMacStatistic:
         df = pd.read_csv('BigmacPrice.csv')
         country_col = 'name'
         price_col = 'dollar_price'
-        selected_countries = ['China', 'Russia', 'Euro area', 'United States']
+        selected_countries = ['China', 'Russia', 'Euro area', 'United States','Britain', 'Canada', 'Australia', 'Japan', 'Switzerland', 'Sweden','Norway', 'Brazil', 'Mexico','South Africa', 'Turkey', 'India', 'Thailand','Saudi Arabia', 'United Arab Emirates']
         df_filtered = df[df[country_col].isin(selected_countries)] \
                       .drop_duplicates(subset=[country_col], keep='last')
         df_filtered = df_filtered.sort_values(price_col, ascending=False)
@@ -37,3 +37,11 @@ class BigMacStatistic:
         ax.title.set_color('white')
         plt.tight_layout()
         plt.show()
+
+
+
+
+
+
+       
+         
